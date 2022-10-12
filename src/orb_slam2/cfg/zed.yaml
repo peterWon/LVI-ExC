@@ -1,0 +1,120 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+
+#kalibr new 
+# Camera.fx: 5.2972230863689776e+02
+# Camera.fy: 5.3205191311553529e+02
+# Camera.cx: 6.3374371232131637e+02
+# Camera.cy: 3.5992043968620527e+02
+
+# Camera.k1: -8.1388769848123571e-02
+# Camera.k2: 5.9860788675004287e-02
+# Camera.p1: -1.5123862316677543e-03
+# Camera.p2: -2.1103086619224515e-04
+# Camera.k3: 0
+
+
+#kalibr old
+# Camera.fx: 365.56114295
+# Camera.fy: 367.2624234
+# Camera.cx: 623.56879222
+# Camera.cy: 379.80700248
+
+# Camera.k1: -0.01832333
+# Camera.k2: -0.00041966
+# Camera.p1: 0.00006292
+# Camera.p2: 0.00141579
+# Camera.k3: 0
+
+#camodel
+# Camera.fx: 5.2972230863689776e+02
+# Camera.fy: 5.3205191311553529e+02
+# Camera.cx: 6.3374371232131637e+02
+# Camera.cy: 3.5992043968620527e+02
+
+# Camera.k1: -8.1388769848123571e-02
+# Camera.k2: 5.9860788675004287e-02
+# Camera.p1: -1.5123862316677543e-03
+# Camera.p2: -2.1103086619224515e-04
+# Camera.k3: 0
+
+#factory params left cam
+Camera.fx: 530.174987792968
+Camera.fy: 530.094970703125
+Camera.cx: 635.119995117187
+Camera.cy: 356.522003173828
+
+Camera.k1: -0.0397646985948
+Camera.k2: 0.00802944041788
+Camera.p1: -0.0043042199686
+Camera.p2: -0.0001040279967
+Camera.k3: 0.00030608999077
+
+#factory params right cam
+# Camera.fx: 528.8250122070312
+# Camera.fy: 528.2849731445312
+# Camera.cx: 644.1900024414062
+# Camera.cy: 360.0849914550781
+
+# Camera.k1: -0.038669001311063766
+# Camera.k2: 0.007933460175991058
+# Camera.p1: -0.004227689933031797
+# Camera.p2: -0.00010867600212804973
+# Camera.k3: -7.62638e-05
+
+
+# distortion_parameters:
+#    k1: -8.1388769848123571e-02
+#    k2: 5.9860788675004287e-02
+#    p1: -1.5123862316677543e-03
+#    p2: -2.1103086619224515e-04
+# projection_parameters:
+#    fx: 5.2972230863689776e+02
+#    fy: 5.3205191311553529e+02
+#    cx: 6.3374371232131637e+02
+#    cy: 3.5992043968620527e+02
+
+# Camera frames per second 
+Camera.fps: 15.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize:2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500

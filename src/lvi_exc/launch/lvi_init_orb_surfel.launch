@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="lvi_exc" type="lvi_initialize_surfel_orb" name="lvi_initialize_surfel_orb" output="screen">
+      <rosparam file="$(find lvi_exc)/cfg/lvi.yaml" command="load" />
+    </node>
+</launch>
+

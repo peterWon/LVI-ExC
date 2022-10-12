@@ -1,0 +1,21 @@
+*.pdf
+*.bag
+
+# Built objects
+*.so
+*.a
+*.pyc
+
+# Documentation build artifacts
+docs/_build/
+
+# Python build artifacts
+**/build/
+**/dist/
+*.egg-info/
+
+**/cmake-build-*/
+
+**/build-*/
+**/thirdparty/build-*/
+**/thirdparty/build-*

@@ -1,0 +1,91 @@
+#common parameters
+simulation: false
+LidarModel: RS_16
+bag_filename: "/home/wz/dev-sdb/wz/Data/LVI-Calib/Example/2021-12-09-08-50-55.bag"
+
+calib_result_outpath: "/home/wz/dev-sdb/wz/Data/LVI-Calib/Example/LVI_ExC_RESULT"
+
+orb_folder: "ORB"
+loam_folder: "LOAM"
+
+#zed2
+imu_topic: "/zed2/zed_node/imu/data"
+lidar_topic: "/rslidar_points"
+image_topic: "/zed2/zed_node/left_raw/image_raw_gray"
+# image_topic: "/zed2/zed_node/right_raw/image_raw_gray"
+
+
+#write ORB result parameters
+orb_voc: "/home/wz/github/ros_env/calib_ws/lvi_calib_ws/src/orb_slam2/Vocabulary/ORBvoc.txt"
+orb_slam_cfg: "/home/wz/github/ros_env/calib_ws/lvi_calib_ws/src/orb_slam2/cfg/zed.yaml"
+
+show_ui: false
+bag_start: 0
+bag_durr: -1
+scan4map: 5
+ndtResolution: 0.5
+associated_radius: 0.05
+
+#trajectory setting
+time_offset_padding: 0.2
+knot_distance: 0.02
+optimize_time_offset: false #TODO(wz), has an 'out of range' bug  when optimize LVI, while VI only is ok 
+lock_traj_lidar_in_2nd_stage: false
+lock_traj_lidar_in_3rd_stage: true
+
+#trajectory optimization weights
+w_acc: 18.0
+w_gyr: 28.0
+w_pos: 10.0
+w_rot: 10.0
+w_cam: 5.0
+w_lidar_surfel: 10.0
+w_visual_surfel: 30.0
+
+border_filter_uv: 10
+
+skip_frame: 0
+
+#TODO: currently point to this file itself
+cam_cfg_file: "/home/wz/github/ros_env/calib_ws/lvi_calib_ws/src/lvi_calib/cfg/zed.yaml"
+#camera calibration 
+model_type: PINHOLE
+camera_name: camera
+image_width: 1280
+image_height: 720
+readout: 0.0666 
+
+#disable distortion
+distortion_parameters:
+  k1: 0
+  k2: 0
+  p1: 0
+  p2: 0 
+  k3: 0 
+
+
+#factory params, left
+# distortion_parameters:
+#   k1: -0.0397646985948
+#   k2: 0.00802944041788
+#   p1: -0.0043042199686
+#   p2: -0.0001040279967
+#   k3: 0.00030608999077
+projection_parameters:
+  fx: 530.174987792968
+  fy: 530.094970703125
+  cx: 635.119995117187
+  cy: 356.522003173828
+
+#factory params, right
+# distortion_parameters:
+#   k1: -0.038669001311063766
+#   k2: 0.007933460175991058
+#   p1: -0.004227689933031797
+#   p2: -0.00010867600212804973
+#   k3: -7.62638e-05
+# projection_parameters:
+#   fx: 528.8250122070312
+#   fy: 528.2849731445312
+#   cx: 644.1900024414062
+#   cy: 360.0849914550781

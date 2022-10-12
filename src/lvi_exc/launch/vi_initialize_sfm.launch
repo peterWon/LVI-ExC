@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="config_file" default="euroc.yaml" />
+    
+    <node pkg="lvi_calib" type="vi_initialize_sfm" name="vi_initialize_sfm" output="screen">
+      <param name="config_file"  type="string" value="$(find lvi_calib)/cfg/$(arg config_file)" />
+    </node>
+
+</launch>
+

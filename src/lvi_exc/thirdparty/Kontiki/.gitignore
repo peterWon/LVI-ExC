@@ -1,0 +1,18 @@
+# Built objects
+*.so
+*.a
+*.pyc
+
+# Documentation build artifacts
+docs/_build/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+#CLion / PyCharm directories
+.cache/
+.idea/
+cmake-build-*/
+

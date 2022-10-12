@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="lvi_calib" type="vi_initialize_orb" name="vi_initialize_orb" output="screen">
+      <rosparam file="$(find lvi_calib)/cfg/lvi.yaml" command="load" />
+    </node>
+
+</launch>
+

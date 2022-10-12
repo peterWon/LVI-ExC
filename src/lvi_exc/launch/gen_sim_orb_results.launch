@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="lvi_calib" type="simulate_visual_features" name="simulate_visual_features" output="screen">
+    </node>
+</launch>

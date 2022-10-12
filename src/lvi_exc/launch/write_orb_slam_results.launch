@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="lvi_exc" type="write_orb_slam_results" name="write_orb_slam_results" output="screen">
+      <rosparam file="$(find lvi_exc)/cfg/lvi.yaml" command="load" />
+    </node>
+</launch>
+

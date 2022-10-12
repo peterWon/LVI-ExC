@@ -1,0 +1,14 @@
+<launch>
+    <arg name="voc" default="Vocabulary/ORBvoc.txt" />
+    <arg name="cfg" default="cfg/zed.yaml" />
+   
+    <node pkg="orb_slam2" type="mono_ros" name="mono_ros" 
+      args="$(find orb_slam2)/$(arg voc) $(find orb_slam2)/$(arg cfg)"
+      output="screen" >
+      <remap from="/camera/image_raw" to="/zed2/zed_node/left_raw/image_raw_gray" />
+    </node>
+    
+    <!-- <node name="playbag" pkg="rosbag" type="play" required="false" args="
+      clock $(arg bag_filename) -r 1">
+    </node> -->
+</launch>
